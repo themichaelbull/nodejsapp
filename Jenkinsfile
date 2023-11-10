@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Docker Build and Network'){
             steps {
-                sh "docker build -t nodejsapp . --no-cache"
+                sh "docker build -t nodejsapp . -f Dockerfile --no-cache"
             }
         }
         stage('Docker Run'){

@@ -15,6 +15,7 @@ pipeline {
                 sh "git clone https://github.com/themichaelbull/nodejsapp"
                 sh "ls"
                 sh "cp -r nodejsapp/* ./"
+                sh "ls"
             }
         }
         stage('Docker Build and Network'){

@@ -13,7 +13,7 @@ pipeline {
         stage('Clone Repo'){
             steps {
                 sh "git clone https://github.com/themichaelbull/nodejsapp"
-                sh "cp -r labstretchgoal/* ./"
+                sh "cp -r nodejsapp/* ./"
             }
         }
         stage('Docker Build and Network'){

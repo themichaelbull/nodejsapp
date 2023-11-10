@@ -13,14 +13,12 @@ pipeline {
         stage('Clone Repo'){
             steps {
                 sh "git clone https://github.com/themichaelbull/nodejsapp"
-                sh "ls"
                 sh "cp -r nodejsapp/* ./"
-                sh "ls"
             }
         }
-        stage('Docker Build and Network'){
+        stage('Docker Build'){
             steps {
-                sh "docker build -t nodejsapp . -f Dockerfile --no-cache"
+                sh "docker build -t nodejsapp . --no-cache"
             }
         }
         stage('Docker Run'){
